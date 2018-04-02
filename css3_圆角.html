@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>css3_ 圆角</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+<style type="text/css">
+	#rcorners1{
+		border-radius: 25px;
+		background: #8ac007;
+		padding: 20px;
+		width: 200px;
+		height: 150px;
+	}
+	#rcorners2{
+		border-radius: 25px;
+		border: 2px solid #8ac007;
+		padding: 20px;
+		width: 200px;
+		height: 150px;
+	}
+	#rcorners3{
+		border-radius: 25px;
+		background: url(雪花背景.jpg);
+		background-position: left top;
+		background-repeat: repeat;
+		padding: 20px;
+		width: 200px;
+		height: 150px;  
+	}
+
+	#rcorners4{
+		border-radius: 15px 50px 30px 5px;
+		background:#8ac007;
+		padding: 20px;
+		width: 200px;
+		height: 150px;
+	}
+	#rcorners5{
+		border-radius: 15px 50px 30px;
+		background: #8ac007;
+		padding: 20px;
+		width: 200px;
+		height: 150px;
+	}
+	#rcorners6{
+		border-radius: 15px 50px;
+		background: #8ac007;
+		padding: 20px;
+		width: 200px;
+		height: 150px;
+	}
+
+	#rcorners7{
+		border-radius: 50px/15px;
+		background: #8ac007;
+		padding: 20px;
+		width: 200px;
+		height: 150px;
+	}
+	#rcorners8{
+		border-radius: 15px/50px;
+		background: #8ac007;
+		padding: 20px;
+		width: 200px;
+		height: 150px;
+	}
+	#rcorners9{
+		border-radius: 50%;
+		background: #8ac007;
+		padding: 20px;
+		width: 200px;
+		height: 150px;
+	}
+
+    #topleft{
+    	border:2px solid;
+    	padding: 10px;
+    	background: #dddddd;
+    	border-top-left-radius: 2em;/*em是倍数*/
+    	-webkit-border-top-left-radius:2em;/*safari*/  
+    }
+</style>
+</head>
+<body>
+    <p id="rcorners1">圆角</p>
+    <p id="rcorners2">圆角</p>
+    <p id="rcorners3">圆角</p>
+
+    <p id="rcorners4">圆角（指定角）</p>
+    <p id="rcorners5">圆角（指定角）</p>
+    <p id="rcorners6">圆角（指定角）</p>
+
+    <p id="rcorners7">椭圆角</p>
+    <p id="rcorners8">椭圆角</p>
+    <p id="rcorners9">椭圆角</p>
+
+    <div id="topleft">添加左上角一个圆角（其它角同理类推）</div>
+</body>
+</html>

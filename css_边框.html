@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>css3_边框</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+
+<style type="text/css">
+	#radius{
+		border: 2px solid #a1a1a1;
+		padding: 10px 40px;
+		background: #dddddd;
+		width: 300px;
+		border-radius: 25px;
+	}
+
+	#shadow{
+		width: 300px;background;
+		height: 100px;
+		background-color: yellow;
+		box-shadow: 10px 10px 5px #888888;
+	}
+
+	.borderimg{
+		border: 15px solid transparent;
+		width: 250px;
+		padding: 10px 20px;
+	}
+	.round{
+		-webkit-border-image:url(border.png)30 30 round;/*safari*/
+		-o-border-image:url(border.png)30 30 round;/*opera*/
+		border-image: url(border.png)30 30 round;
+	}
+	.stretch{
+		-webkit-border-image:url(border.png)30 30 stretch;
+        -o-border-image:url(border.png)30 30 stretch;
+        border-image:url(border.png)30 30 stretch;
+	}
+</style>
+</head>
+<body>
+    <div id="radius" style="text-align: center;">圆角边框</div><br>
+
+    <div id="shadow" style="text-align: center;">css3盒阴影</div><br>
+
+    <div class='borderimg round'>平铺重复填充该区域</div><br>
+    <div class="borderimg stretch">图像被拉伸以填充该区域</div>
+    <p>原图：</p>
+    <img src="border.png" alt="">
+</body>
+</html>
