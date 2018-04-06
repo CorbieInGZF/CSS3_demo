@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>css3_文本效果</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+    <h1>文本阴影：</h1>
+    <h3>CSS3 中，text-shadow属性适用于文本阴影:</h3>
+    <style type="text/css">
+    	#h1sd{
+    		text-shadow: 5px 5px 5px #ff0000;
+    	}
+    </style>
+    <h1 id="h1sd">Text-shadow</h1>
+
+    <h3>CSS3 中 CSS3 box-shadow 属性适用于盒子阴影:</h3>
+    <style type="text/css">
+    	#divsd{
+    		width: 300px;
+    		height: 100px;
+    		padding: 15px;
+    		background-color: yellow;
+    		box-shadow: 10px 10px 5px #888888;
+    	}
+    </style>
+    <div id="divsd" style="text-align: center;">box-shadow</div>
+
+    <p style="color: red"><b>在 ::before 和 ::after 两个伪元素中添加阴影效果:</b></p>
+    <style type="text/css">
+    	#boxshadow{
+    		position: relative;
+    		-moz-box-shadow: 1px 2px 4px rgba(0,0,0,0.5);
+    		-webkit-box-shadow: 1px 2px 4px rgba(0,0,0,.5);
+            box-shadow: 1px 2px 4px rgba(0,0,0,.5);
+            padding: 10px;
+            background: white;
+    	}
+    	/*给图片一个边框*/
+    	#boxshadow img{
+            width: 100%;
+            border:1px solid #8a4419;
+            border-style: inset;
+    	}
+    	#boxshadow::after{
+    		content: '';
+    		position: absolute;
+    		z-index: -1;/*把阴影放在图片后*/
+    		-webkit-box-shadow: 0 15px 20px rgba(0,0,0,0.3);
+    		-moz-box-shadow: 0 15px 20px rgba(0,0,0,0.3);
+    		box-shadow: 0 15px 20px rgba(0,0,0,0.3);
+    		width: 70%;
+    		left: 15%;
+    		height:100px;
+    		bottom: 0;
+    	}
+    </style>
+    <div id="boxshadow">
+    	<img src="http://www.runoob.com/try/demo_source/rock600x400.jpg" alt="" width="600" height="400">
+    </div>
+
+    <h2 style="color: red">阴影的一个使用特例是卡片效果:</h2>
+    <p>box-shadow 属性用来可以创建纸质样式卡片:</p>
+
+    <h3 style="color: blue">文字卡片：</h3>
+    <style type="text/css">
+    	div.card{
+    		width: 250px;
+    		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    		text-align: center;
+    	}
+    	div.header{
+    		background-color: #4caf50;
+    		color: white;
+    		padding: 10px;
+    		font-size:40px;
+    	}
+    	div.container{
+    		padding: 10px;
+    	}
+    </style>
+    <div class="card">
+    	<div class="header">
+    		<h1>1</h1>
+    	</div>
+    	<div class="container">
+    		<p>April 6, 2018</p>
+    	</div>
+    </div>
+    <br>
+
+    <h3 style="color: blue">图片卡片：</h3>
+    <style type="text/css">
+    	div.polaroid{
+    		width: 250px;
+    		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    		text-align: center;
+    	}
+    	div.container{
+    		padding: 10px;
+    	}
+    </style>
+    <div class="polaroid">
+    	<img src="http://www.runoob.com/try/demo_source/rock600x400.jpg" alt="" style="width: 100%">
+    	<div class="container">
+    		<p>Hardanger,Norway</p>
+    	</div>
+    </div>
+
+    <h1>Text Overflow属性：</h1>
+    <style type="text/css">
+    	div.test{
+    		white-space: nowrap;
+    		width: 12em;
+    		overflow: hidden;
+    		border: 1px solid #000000;
+    	}
+    </style>
+    <p>以下 div 容器内的文本无法完全显示，可以看到它被裁剪了</p>
+    <p>div 使用 &quot;text-overflow:ellipsis&quot;:</p>
+    <div class="test" style="text-overflow:ellipsis;">This is some long text that will not fit in the box</div>
+    <p>div 使用 &quot;text-overflow:clip&quot;:</p>
+    <div class="test" style="text-overflow:clip;">This is some long text that will not fit in the box</div>
+    <p>div 使用自定义字符串 &quot;text-overflow: &gt;&gt;&quot;(只在 Firefox 浏览器下有效):</p>
+    <div class="test" style="text-overflow:'>>';">This is some long text that will not fit in the box</div>
+
+    <h1>换行：</h1>
+    <style type="text/css">
+    	p.test{
+    		width: 11em;
+    		border:1px solid #000000;
+    		word-break: break-word;/*word-break规定非中日韩文本的换行规则。*/
+    	}
+    	p.test1{
+    		width: 9em;
+    		border: 1px solid #000000;
+    		word-wrap: keep-all;/*word-wrap允许对长的不可分割的单词进行分割并换行到下一行。*/
+    	}
+    	p.test2{
+    		width: 9em;
+    		border: 1px solid #000000;
+    		word-wrap: break-all;
+    	}
+
+    	p.test3{
+    		width: 11em;
+    		border: solid #000000;
+    		text-wrap: none;
+    	}
+    	p.test4{
+    		width: 11em;
+    		border: 1px solid #000000;
+    		text-wrap: normal;
+    	}
+    </style>
+    <p class="test">This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword. The long word will break and wrap to the next line.</p>
+    <p class="test1">This paragraph contains some text. This line will-break-at-hyphenates.</p>
+    <p class="test2">This paragraph contains some text: The lines will break at any character.</p>
+    <p><b>注意:</b>  word-break 属性不兼容 Opera.</p>
+
+    <p class="test3">这段包含一些文本。这一行的文字不会换行到下一行。</p>
+    <p class="test4"> 这段包含一些文本。这一行的文字正常换行。</p>
+
+    <h3>text-justify属性：</h3>
+    <style type="text/css">
+    	#divjus{
+    		text-align: justify;
+    		text-justify:inter-word;
+    	}
+    </style>
+    <div>In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.'</div>
+    <p><b>提示：</b> 调整浏览器窗口的大小， 以查看“text-justify”如何工作</p>
+    <p><b>注意:</b>text-justify 只兼容IE浏览器.</p>
+</body>
+</html>
