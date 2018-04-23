@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>css3_过渡</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+    <style type="text/css">
+    	.div1{
+    		width: 100px;
+    		height: 100px;
+    		background-color: red;
+    		-webkit-transition:width 2s,height 2s,-webkit-transform 2s;
+    		transition:  width 2s,height 2s,transform 2s;
+    	}
+    	.div1:hover{
+            width: 200px;
+            height: 200px;
+            -webkit-transform:rotate(180deg);
+            transform: rotate(180deg);
+    	}
+    </style>
+    <div class="div1">鼠标移动到这里，查看过渡效果</div>
+    <h3>在一个例子中使用所有过渡属性：</h3>
+    <style type="text/css">
+    	.div2{
+    		width: 100px;
+    		height: 100px;
+    		background-color: red;
+    		transition-property: width;/*	规定应用过渡的 CSS 属性的名称。*/
+    		transition-duration: 1s;/*transition-duration 属性规定完成过渡效果需要花费的时间（以秒或毫秒计）*/
+    		transition-timing-function: linear;/*transition-timing-function属性指定切换效果的速度。此属性允许一个过渡效果，以改变其持续时间的速度。*/
+    		transition-delay: 1s;/*transition-delay 属性指定何时将开始切换效果。*/
+    	}
+    	.div2:hover{
+    		width: 200px;
+    	}
+    </style>
+    <div class="div2">鼠标移动到这里，查看过渡效果</div>
+    <p>transition-timing-function属性：</p>
+    <img src="transition-timing-function属性.png" alt="">
+    <style type="text/css">
+    	div{
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            transition:width 2s;
+            -webkit-transition:width 2s;
+    	}
+    	#diva{transition-timing-function: linear;}
+    	#divb{transition-timing-function: ease;}
+    	#divc{transition-timing-function: ease-in;}
+    	#divd{transition-timing-function: ease-out;}
+    	#dive{transition-timing-function: ease-in-out;}
+
+    	#diva {-webkit-transition-timing-function: linear;}
+        #divb {-webkit-transition-timing-function: ease;}
+        #divc {-webkit-transition-timing-function: ease-in;}
+        #divd {-webkit-transition-timing-function: ease-out;}
+        #dive {-webkit-transition-timing-function: ease-in-out;}
+
+    	div:hover{
+    		width: 300px;
+    	}
+    </style>
+        <div id="diva" style="top:100px">linear</div>
+        <div id="divb" style="top:150px">ease</div>
+        <div id="divc" style="top:200px">ease-in</div>
+        <div id="divd" style="top:250px">ease-out</div>
+        <div id="dive" style="top:300px">ease-in-out</div>
+</body>
+</html>

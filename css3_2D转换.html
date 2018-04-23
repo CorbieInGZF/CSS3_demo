@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>css3_2D转换</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+    <div>
+    	<h1>CSS3 转换可以可以对元素进行移动、缩放、转动、拉长或拉伸。</h1>
+    </div>
+
+    <h3 style="color: blue">translate()方法：</h3>
+    <style type="text/css">
+    	.trans1{
+    		width: 100px;
+    		height: 75px;
+    		background-color: red;
+    		border: 1px solid black;
+    	}
+    	.trans2{
+    		transform: translate(50px,100px);
+    		-ms-transform:translate(50px,100px);/*IE9*/
+    		-webkit-transform:translate(50px,100px);/*safari&chrome*/
+    	}
+    </style>
+    <div class="trans1">Hello. This is a DIV element.</div>
+    <div class="trans1 trans2">Hello. This is a DIV element.</div>
+    <hr>
+
+    <h3 style="color: blue">rotate()方法：</h3>
+    <style type="text/css">
+    	.rotate1{
+    		width: 100px;
+    		height: 75px;
+    		background-color: red;
+    		border: 1px solid black
+    	}
+    	.rotate2{
+    		transform: rotate(30deg);
+    		-ms-transform:rotate(30deg);
+    		-webkit-transform:rotate(30deg); 
+    	}
+    </style>
+    <div class="rotate1">div元素</div>
+    <div class="rotate1 rotate2">div元素</div>
+    <hr>
+
+    <style type="text/css">
+    	.scale1{
+    		margin: 150px;
+    		width: 200px;
+    		height: 100px;
+    		background-color: yellow;
+    		border: 1px solid black;
+    		-ms-transform:scale(2,3);
+    		-webkit-transform: scale(2,3);
+            transform: scale(2,3);
+    	}
+    </style>
+    <div class="scale1">div元素的宽度是原来的2倍，高度是原来的3倍</div>
+    <hr>
+
+    <style type="text/css">
+    	.skew1{
+            width: 150px;
+            height: 100px;
+            background-color: red;
+            border: 1px solid black;
+    	}
+    	.skew2{
+    		transform: skew(30deg,20deg);
+    		-ms-transform:skew(30deg,20deg);
+    		-webkit-transform:skew(30deg,20deg);
+    	}
+    </style>
+    <div class="skew1">skew(30deg,20deg) 元素在X轴和Y轴上倾斜20度30度。</div>
+    <div class="skew1 skew2">skew(30deg,20deg) 元素在X轴和Y轴上倾斜20度30度。</div>
+    <hr>
+
+    <style type="text/css">
+    	.matrix1{
+    		width: 150px;
+    		height: 100px;
+    		background-color: red;
+    		border: 1px solid black;
+    	}
+    	.matirx2{
+    		transform: matrix(0.866,0.5,-0.5,0.866,0,0);
+    		-ms-transform:matrix(0.866,0.5,-0.5,0.866,0,0);
+    		--webkit-transform: matrix(0.866,0.5,-0.5,0.866,0,0);
+    	}
+    </style>
+    <div class="matrix1">matrix 方法有六个参数，包含旋转，缩放，移动（平移）和倾斜功能。</div> 
+    <div class="matrix1 matirx2">matrix 方法有六个参数，包含旋转，缩放，移动（平移）和倾斜功能。</div>
+
+    <img src="2D转换方法.png" alt="">
+</body>
+</html>

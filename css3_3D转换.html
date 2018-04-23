@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>css3_3D转换</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+	<style type="text/css">
+		#rotate2D,#rotate3D {
+    width: 80px;
+    height: 70px;
+    color: white;
+    position:relative;
+    font-weight:bold;
+    font-size:15px;
+    padding:10px;
+    float:left;
+    margin-right:50px;
+    border-radius:5px;
+    border:1px solid #000000;
+    background:red;
+    margin:10px;
+}
+</style>
+<script>
+var x,y,n=0,ny=0,rotINT,rotYINT
+function rotateDIV()
+{
+x=document.getElementById("rotate2D")
+clearInterval(rotINT)
+rotINT=setInterval("startRotate()",10)
+}
+function rotateYDIV()
+{
+y=document.getElementById("rotate3D")
+clearInterval(rotYINT)
+rotYINT=setInterval("startYRotate()",10)
+}
+function startRotate()
+{
+n=n+1
+x.style.transform="rotate(" + n + "deg)"
+x.style.webkitTransform="rotate(" + n + "deg)"
+x.style.OTransform="rotate(" + n + "deg)"
+x.style.MozTransform="rotate(" + n + "deg)"
+if (n==180 || n==360)
+	{
+	clearInterval(rotINT)
+	if (n==360){n=0}
+	}
+}
+function startYRotate()
+{
+ny=ny+1
+y.style.transform="rotateY(" + ny + "deg)"
+y.style.webkitTransform="rotateY(" + ny + "deg)"
+y.style.OTransform="rotateY(" + ny + "deg)"
+y.style.MozTransform="rotateY(" + ny + "deg)"
+if (ny==180 || ny>=360)
+	{
+	clearInterval(rotYINT)
+	if (ny>=360){ny=0}
+	}
+}
+//-->
+</script>
+<p class="example">点击下面的元素，来查看 2D 转换与 3D 转换之间的不同之处：</p>
+<div style="height:80px;">
+	<div onmouseover="rotateDIV()" id="rotate2D">2D rotate</div>
+	<div onmouseover="rotateYDIV()" id="rotate3D">3D rotate</div>
+</div>
+
+
+
+<h3>rotateX()方法：</h3>
+<style type="text/css">
+	.rotateX1{
+		width: 150px;
+		height: 100px;
+		background-color: red;
+		border: 1px solid black;
+	}
+	.rotateX2{
+		transform: rotateX(120deg);
+		-webkit-transform:rotateX(120deg);
+	}
+</style>
+<div class="rotateX1">rotateX()方法，围绕其在一个给定度数X轴旋转的元素。</div>
+<div class="rotateX1 rotateX2">rotateX()方法，围绕其在一个给定度数X轴旋转的元素。</div>
+
+<h3>transform属性：</h3>
+<style type="text/css">
+	.div1{
+		width: 200px;
+		height: 100px;
+		background-color: yellow;
+		transform: rotate(7deg);/*顺时针旋转7度*/
+		-ms-transform:rotate(7deg);
+		-webkit-transform:rotate(7deg); 
+	}
+</style>
+<div class="div1"> transform属性</div>
+
+</body>
+</html>
