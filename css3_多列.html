@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>css3_多列</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+    <p style="font-size: 5; font-weight: 1000;"> CSS3 的多列属性:</p>
+    <ul>
+    	<li>column-count</li>
+    	<li>column-gap</li>
+    	<li>column-rule-style</li>
+    	<li>column-rule-width</li>
+    	<li>column-rule-color</li>
+    	<li>column-rule</li>
+    	<li>column-span</li>
+    	<li>column-width</li>
+    </ul>
+
+    <p>创建多列：</p>
+    <style type="text/css">
+    	.newspaper{
+    		-moz-column-count:3;
+    		-webkit-column-count:3;
+    		column-count:3;
+    	}
+    </style>
+    <div class="newspaper">“当我年轻的时候，我梦想改变这个世界；当我成熟以后，我发现我不能够改变这个世界，我将目光缩短了些，决定只改变我的国家；当我进入暮年以后，我发现我不能够改变我们的国家，我的最后愿望仅仅是改变一下我的家庭，但是，这也不可能。当我现在躺在床上，行将就木时，我突然意识到：如果一开始我仅仅去改变我自己，然后，我可能改变我的家庭；在家人的帮助和鼓励下，我可能为国家做一些事情；然后，谁知道呢?我甚至可能改变这个世界。”</div>
+
+    <p>多列中列与列间的间隙：</p>
+    <style type="text/css">
+    	.newspaper1{
+    		-moz-column-count:3;
+    		-webkit-column-count:3;
+    		column-count:3;
+
+    		-moz-column-gap:40px;
+    		-webkit-column-gap:40px;
+    		column-gap:40px; 
+  </style>
+    <div class="newspaper1">“当我年轻的时候，我梦想改变这个世界；当我成熟以后，我发现我不能够改变这个世界，我将目光缩短了些，决定只改变我的国家；当我进入暮年以后，我发现我不能够改变我们的国家，我的最后愿望仅仅是改变一下我的家庭，但是，这也不可能。当我现在躺在床上，行将就木时，我突然意识到：如果一开始我仅仅去改变我自己，然后，我可能改变我的家庭；在家人的帮助和鼓励下，我可能为国家做一些事情；然后，谁知道呢?我甚至可能改变这个世界。”</div>
+
+    <p>css3列边框：</p>
+    <style type="text/css">
+    	.newspaper2{
+    		-moz-column-count:3;
+    		-webkit-column-count:3;
+    		column-count:3;
+
+    		-moz-column-rule-style:solid;
+    		-webkit-column-rule-style:solid;
+    		column-rule-style:solid; 
+    	}
+    </style>
+    <div class="newspaper2">“当我年轻的时候，我梦想改变这个世界；当我成熟以后，我发现我不能够改变这个世界，我将目光缩短了些，决定只改变我的国家；当我进入暮年以后，我发现我不能够改变我们的国家，我的最后愿望仅仅是改变一下我的家庭，但是，这也不可能。当我现在躺在床上，行将就木时，我突然意识到：如果一开始我仅仅去改变我自己，然后，我可能改变我的家庭；在家人的帮助和鼓励下，我可能为国家做一些事情；然后，谁知道呢?我甚至可能改变这个世界。”</div>
+
+    <p>边框厚度、颜色：</p>
+    <style type="text/css">
+    	.newspaper3{
+    		-moz-column-count:3;
+    		-webkit-column-count:3;
+    		column-count:3;
+
+    		-moz-column-rule-style:outset;
+    		-webkit-column-rule-style:outset;
+    		column-rule-style:outset; 
+
+    		-moz-column-gap:40px;
+    		-webkit-column-gap:40px;
+    		column-gap:40px; 
+
+    		-moz-column-rule-width:1px;
+    		-webkit-column-rule-width:1px;
+    		column-rule-width:1px; 
+
+    		-webkit-column-rule-color: lightblue; /* Chrome, Safari, Opera */
+            -moz-column-rule-color: lightblue; /* Firefox */
+            column-rule-color: lightblue;
+    	}
+    </style>
+    <div class="newspaper3">“当我年轻的时候，我梦想改变这个世界；当我成熟以后，我发现我不能够改变这个世界，我将目光缩短了些，决定只改变我的国家；当我进入暮年以后，我发现我不能够改变我们的国家，我的最后愿望仅仅是改变一下我的家庭，但是，这也不可能。当我现在躺在床上，行将就木时，我突然意识到：如果一开始我仅仅去改变我自己，然后，我可能改变我的家庭；在家人的帮助和鼓励下，我可能为国家做一些事情；然后，谁知道呢?我甚至可能改变这个世界。”</div>
+    <p style="color: red; font-size: 6; font-weight: 1000">column-rule 属性是 column-rule-* 所有属性的简写。</p>
+
+    <p>制定跨越多少列：</p>
+    <style type="text/css">
+    	h2{
+    		column-span: all;
+    		-webkit-column-span:all;
+    	}
+    </style>
+    <div class="newspaper">
+    	<h2>英国维斯米斯特教堂碑文</h2>
+    	“当我年轻的时候，我梦想改变这个世界；当我成熟以后，我发现我不能够改变这个世界，我将目光缩短了些，决定只改变我的国家；当我进入暮年以后，我发现我不能够改变我们的国家，我的最后愿望仅仅是改变一下我的家庭，但是，这也不可能。当我现在躺在床上，行将就木时，我突然意识到：如果一开始我仅仅去改变我自己，然后，我可能改变我的家庭；在家人的帮助和鼓励下，我可能为国家做一些事情；然后，谁知道呢?我甚至可能改变这个世界。”
+    </div>
+
+    <p>指定列的宽度：</p>
+    <style type="text/css">
+    	.newspaper4{
+    		column-width: 100px;
+    		-moz-column-width:100px;
+    		-webkit-column-width:100px;  
+    	}
+    </style>
+    <div class="newspaper4">
+    	“当我年轻的时候，我梦想改变这个世界；当我成熟以后，我发现我不能够改变这个世界，我将目光缩短了些，决定只改变我的国家；当我进入暮年以后，我发现我不能够改变我们的国家，我的最后愿望仅仅是改变一下我的家庭，但是，这也不可能。当我现在躺在床上，行将就木时，我突然意识到：如果一开始我仅仅去改变我自己，然后，我可能改变我的家庭；在家人的帮助和鼓励下，我可能为国家做一些事情；然后，谁知道呢?我甚至可能改变这个世界。”
+    </div>
+
+    <p>columns：设置column-width和column-count的简写：</p>
+    <style type="text/css">
+    	.newspaper5{
+    		columns: 100px 3;
+    	    -webkit-columns:100px 3;
+            -moz-columns:100px 3;
+    	}
+    </style>
+    <div class="newspaper5">“当我年轻的时候，我梦想改变这个世界；当我成熟以后，我发现我不能够改变这个世界，我将目光缩短了些，决定只改变我的国家；当我进入暮年以后，我发现我不能够改变我们的国家，我的最后愿望仅仅是改变一下我的家庭，但是，这也不可能。当我现在躺在床上，行将就木时，我突然意识到：如果一开始我仅仅去改变我自己，然后，我可能改变我的家庭；在家人的帮助和鼓励下，我可能为国家做一些事情；然后，谁知道呢?我甚至可能改变这个世界。”</div>
+</body>
+</html>

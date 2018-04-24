@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>css3_动画</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+    <h3>CSS3 @keyframes 规则:</h3>
+    <p>@keyframes规则是创建动画。 @keyframes规则内指定一个CSS样式和动画将逐步从目前的样式更改为新的样式。</p><br>
+    <p>当在 @keyframes 创建动画，把它绑定到一个选择器，否则动画不会有任何效果。</p><br>
+    <p>指定至少这两个CSS3的动画属性绑定向一个选择器：</p>
+    <ul style="list-style-type: disc;">
+    	<li>规定动画的名称</li>
+    	<li>规定动画的时长</li>
+    </ul>
+
+    <style type="text/css">
+    	.div1{
+    		width: 100px;
+    		height: 100px;
+    		background-color: red;
+    		animation: myfirst 5s;
+    		-webkit-animation: myfirst 5s;
+    	}
+    	@keyframes myfirst{
+    		from{background: red;}
+    		to{background: yellow;}
+    	}
+    	@-webkit-keyframes myfirst{
+    		from{background: red;}
+    		to{background: yellow;}
+    	}
+    </style>
+    <div class="div1"></div>
+
+    <p style="color: red">请用百分比来规定变化发生的时间，或用关键词 "from" 和 "to"，等同于 0% 和 100%。0% 是动画的开始，100% 是动画的完成。</p><br>
+    <p style="color: green">当动画为 25% 及 50% 时改变背景色，然后当动画 100% 完成时再次改变：</p>
+    <style type="text/css">
+    	.div2{
+    		width: 100px;
+    		height: 100px;
+    		background: red;
+    		animation: mysecond 5s;
+    		-moz-animation:mysecond 5s;
+    		-webkit-animation: mysecond 5s;
+    		-o-animation:mysecond 5s;
+    	}
+    	@keyframes mysecond{
+    		0% {background: red;}
+    		25% {background: yellow;}
+    		50% {background: green;}
+    		100% {background: blue;}
+    	}
+    	@-moz-keyframes mysecond{
+    		0% {background: red;}
+    		25% {background: yellow;}
+    		50% {background: green;}
+    		100% {background: blue;}
+    	}
+    	@-webkit-keyframes mysecond{
+    		0% {background: red;}
+    		25% {background: yellow;}
+    		50% {background: green;}
+    		100% {background: blue;}
+    	}
+    	@-o-keyframes mysecond{
+    		0% {background: red;}
+    		25% {background: yellow;}
+    		50% {background: green;}
+    		100% {background: blue;}
+    	}
+    </style>
+    <div class="div2"></div>
+
+    <p style="color: green">改变背景色和位置(使用全部动画属性且简写animation属性)：</p>
+    <p>animation-direction属性：</p>
+    <img src="animation-direction属性.png" width="500px" height="300">
+    <style type="text/css">
+    	.div3{
+    		width: 100px;
+    		height: 100px;
+    		background: red;
+    		position: relative;
+    		animation: mythird 5s linear 2s infinite alternate;
+    		-webkit-animation: mythird 5s linear 2s infinite alternate;
+    	}
+    	@keyframes mythird{
+    		0% {background: red;left: 0px; top: 0px;}
+    		25% {background: yellow;left: 200px; top: 0px;}
+    		50% {background: blue;left: 200px; top: 200px;}
+    		75% {background: green;left: 0px; top: 200px;}
+    		100% {background: red;left: 0px; top: 0px;}
+    	}
+    	@-webkit-keyframes mythird{
+    		0% {background: red;left: 0px; top: 0px;}
+    		25% {background: yellow;left: 200px; top: 0px;}
+    		50% {background: blue;left: 200px; top: 200px;}
+    		75% {background: green;left: 0px; top: 200px;}
+    		100% {background: red;left: 0px; top: 0px;}
+    	}
+    </style>
+    <div class="div3"></div>
+    <br>
+</body>
+</html>
