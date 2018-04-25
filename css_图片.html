@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>css_图片</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+    <h3>圆角图片：</h3>
+    <style type="text/css">
+    	.img1{
+    		border-radius: 10px;
+    	}
+    	.img2{
+    		border-radius: 50%;
+    	}
+    </style>
+    <p>使用 border-radius 属性来创建圆角图片:</p>
+    <img class="img1" src="timg.jpg" alt="" width="200" height="200">
+    <img class="img2" src="timg.jpg" alt="" width="200" height="200">
+
+    <h3>缩略图：</h3>
+    <style type="text/css">
+    	.img3{
+    		display: inline-block;
+    		border:1px solid #ddd;
+    		border-radius: 4px;
+    		padding:5px;
+    		transition: 0.3s;
+    	}
+    	.img3:hover{
+            box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    	}
+    </style>
+    <img class="img3" alt="" src="timg.jpg" width="200" height="200">
+
+    <h3>响应式图片：</h3>
+    <p>响应式图片会自动适配各种尺寸的屏幕。</p>
+    <style type="text/css">
+    	.img4{
+    		max-width: 100%;
+    		height: auto;
+    	}
+    </style>
+    <img class="img4" src="timg.jpg" alt="">
+
+    <h3>图片文本：</h3>
+    <style type="text/css">
+    	.container{
+    		position: relative;
+    	}
+    	.topleft{
+    		position: absolute;
+    		top: 8px;
+    		left: 16px;
+    		font-size: 18px;
+    	}
+    	.bottomright{
+    		position: absolute;
+    		bottom: 8px;
+    		right: 16px;
+    		font-size: 18px;
+    	}
+    	.center{
+    		position: absolute;
+    		left: 0;
+    		top: 50%;
+    		width: 100%;
+    		text-align: center;
+    		font-size: 18px;
+    	}
+    	.img5{
+    		width: 100%;
+    		height: auto;
+    		opacity: 0.3;
+    	}
+    </style>
+    <div class="container">
+    	<img class="img5" src="http://www.runoob.com/wp-content/uploads/2016/04/trolltunga.jpg">
+    	<div class="topleft">左上角</div>
+    	<div class="bottomright">右下角</div>
+    	<div class="center">居中</div>
+    </div>
+
+    <h3>卡片式图片：</h3>
+    <style type="text/css">
+    	body{
+    		margin: 25px;
+    	}
+    	.polaroid{
+    		width: 80%;
+    		background-color: white;
+    		box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    		margin-bottom: 25px;
+    	}
+    	.container1{
+    		text-align: center;
+    		padding: 10px 20px;
+    	}
+    </style>
+    <h2>响应式卡片</h2>
+    <div class="polaroid">
+    	<img src="http://www.runoob.com/wp-content/uploads/2016/04/trolltunga.jpg" style="width: 100%">
+    	<div class="container1">
+    		<p>The Troll's tongue in Hardanger, Norway</p>
+    	</div>
+    </div>
+
+    <h3>图片滤镜：</h3>
+    <p>CSS filter 属性用为元素添加可视效果 </p>
+    <style type="text/css">
+    	.img6{
+    		width: 33%;
+    		height: auto;
+    		float: left;
+    		max-width: 235px;
+    	}
+.blur {-webkit-filter: blur(4px);filter: blur(4px);}
+.brightness {-webkit-filter: brightness(250%);filter: brightness(250%);}
+.contrast {-webkit-filter: contrast(180%);filter: contrast(180%);}
+.grayscale {-webkit-filter: grayscale(100%);filter: grayscale(100%);}
+.huerotate {-webkit-filter: hue-rotate(180deg);filter: hue-rotate(180deg);}
+.invert {-webkit-filter: invert(100%);filter: invert(100%);}
+.opacity {-webkit-filter: opacity(50%);filter: opacity(50%);}
+.saturate {-webkit-filter: saturate(7); filter: saturate(7);}
+.sepia {-webkit-filter: sepia(100%);filter: sepia(100%);}
+.shadow {-webkit-filter: drop-shadow(8px 8px 10px green);filter: drop-shadow(8px 8px 10px green);}   	
+    </style>
+<img src="http://www.runoob.com/try/demo_source/pineapple.jpg" alt="Pineapple" width="300" height="300">
+<img class="blur img6" src="http://www.runoob.com/try/demo_source/pineapple.jpg" alt="Pineapple" width="300" height="300">
+<img class="brightness img6" src="http://www.runoob.com/try/demo_source/pineapple.jpg" alt="Pineapple" width="300" height="300">
+<img class="contrast img6" src="http://www.runoob.com/try/demo_source/pineapple.jpg" alt="Pineapple" width="300" height="300">
+<img class="grayscale img6" src="http://www.runoob.com/try/demo_source/pineapple.jpg" alt="Pineapple" width="300" height="300">
+<img class="huerotate img6" src="http://www.runoob.com/try/demo_source/pineapple.jpg" alt="Pineapple" width="300" height="300">
+<img class="invert img6" src="http://www.runoob.com/try/demo_source/pineapple.jpg" alt="Pineapple" width="300" height="300">
+<img class="opacity img6" src="http://www.runoob.com/try/demo_source/pineapple.jpg" alt="Pineapple" width="300" height="300">
+<img class="saturate img6" src="http://www.runoob.com/try/demo_source/pineapple.jpg" alt="Pineapple" width="300" height="300">
+<img class="sepia img6" src="http://www.runoob.com/try/demo_source/pineapple.jpg" alt="Pineapple" width="300" height="300">
+<img class="shadow img6" src="http://www.runoob.com/try/demo_source/pineapple.jpg" alt="Pineapple" width="300" height="300">
+
+
+    <h3>图片Modal(模态)：</h3>
+    <p>本实例演示了如何结合 CSS 和 JavaScript 来一起渲染图片。</p>
+    <p>首先，我们使用 CSS 来创建 modal 窗口 (对话框), 默认是隐藏的。</p>
+    <p>然后，我们使用 JavaScript 来显示模态窗口，当我们点击图片时，图片会在弹出的窗口中显示</p>
+
+    <style type="text/css">
+    	#myImg{
+    		border-radius: 5px;
+    		cursor: pointer;
+    		transition: 0.3s;
+    	}
+    	#myImg:hover{
+    		opacity: 0.7s;
+    	}
+    	.modal{
+    		display: none;
+    		position: fixed;
+    		z-index: 1;
+    		padding-top: 100px;
+    		left: 0;
+    		top:0;
+    		width: 100%;
+    		height: 100%;
+    		overflow: auto;
+    		background-color: rgb(0,0,0);
+    		background-color: rgba(0,0,0,0.9);
+    	}
+    	.modal-content{
+    		margin: auto;
+    		display: block;
+    		width: 80%;
+    		max-width: 700px;
+    	}
+    	#caption{
+    		margin: auto;
+    		display: block;
+    		width: 80%;
+    		max-width: 700px;
+    		text-align: center;
+    		color: #ccc;
+    		padding:10px 0;
+    		height: 150px;
+    	}
+    	.modal-content,#caption{
+    		-webkit-animation-name: zoom;
+    		-webkit-animation-duration:0.6s;
+    		animation-name: zoom;
+    		animation-duration: 0.6s; 
+    	}
+    	@-webkit-keyframes zoom{
+    		from{-webkit-transform: scale(0);}
+    		to{-webkit-transform: scale(1);}
+    	}
+    	@keyframes zoom{
+    		form{transform: scale(0.1);}
+    		to{transform: scale(1);}
+    	}
+    	.close{
+    		position: absolute;
+    		top: 15px;
+    		right: 35px;
+    		color: #f1f1f1;
+    		font-size: 40px;
+    		font-weight: bold;
+    		transition: 0.3s;
+    	}
+    	.close:hover,
+    	.close:focus{
+    		color: #bbb;
+    		text-decoration: none;
+    		cursor: pointer;
+    	}
+    	@media only screen and(max-width: 700px) {
+    		.modal-content{
+    			width: 100%;
+    		}
+    	}
+    </style>
+    <img id="myImg" src="http://www.runoob.com/wp-content/uploads/2016/04/img_lights.jpg" alt="Northern Lights, Norway" width="300" height="200">
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">×</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+    <script type="text/javascript">
+    	var modal =document.getElementById('myModal');
+    	var img = document.getElementById('myImg');
+    	var modalImg = document.getElementById("img01");
+    	var captionText = document.getElementById("caption");
+    	img.onclick = function(){
+    		modal.style.display = "block";
+    		modalImg.src = this.src;
+    		modalImg.alt = this.alt;
+    		captionText.innerHTML=this.alt;
+    	}
+    	var span = document.getElementsByClassName("close")[0];
+    	span.onclick = function(){
+    		modal.style.display = "none";
+    	}
+    </script>
+</body>
+</html>

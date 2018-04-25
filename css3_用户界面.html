@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>css3_用户界面</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="" rel="stylesheet">
+</head>
+<body>
+    <h3>css3调整尺寸(resize)：</h3>
+    <style type="text/css">
+    	.div1{
+    		border: 2px solid;
+    		padding: 10px 40px;
+    		width: 300px;
+    		resize: both;/*horizontal(宽度)、vertical(高度)*/
+    		overflow: auto;
+    	}
+    </style>
+    <div class="div1">调整属性指定一个元素是否由用户可调整大小的。</div>
+
+    <h3>css3方框大小调整(box-sizing)：</h3>
+    <style type="text/css">
+    	.container{
+    		width: 30em;
+    		border: 1em solid;
+    	}
+    	.box{
+    		box-sizing: border-box;
+    		width: 50%;
+    		border: 1em solid red;
+    		float: left;
+    	}
+    </style>
+    <div class="container">
+    	<div class="container box">这个 div 占据了左边的一半。</div>
+    	<div class="container box">这个 div 占据了右边的一半。</div>
+    </div>
+
+    <h3>css3外形修饰(outline-offset):</h3>
+    <style type="text/css">
+        .out{
+            margin: 20px;
+            width: 150px;
+            padding: 10px;
+            height: 70px;
+            border:2px solid black;
+            outline: 2px solid red;
+            outline-offset: 15px;
+        }
+    </style>
+    <div class="out">在div外15px的一个轮廓</div>
+
+    <h3>appearance属性：</h3>
+    <p>appearance 属性允许您使元素看上去像标准的用户界面元素。</p>
+    <style type="text/css">
+        .icon{
+            appearance:icon;
+            -webkit-appearance:icon; 
+        }
+    </style>
+    <div class="icon">
+        小图片显示
+        <img src="appearance属性.png">
+    </div>
+</body>
+</html>
